@@ -39,7 +39,7 @@ class MAX6675(Block):
         try:
             with self._spi_lock:
                 bytes_read = self._spi.readbytes(2)
-                self.logger.error("Read bytes over SPI: {}".format(bytes_read))
+                self.logger.debug("Read bytes over SPI: {}".format(bytes_read))
             temperature = ((bytes_read[0] << 8 | bytes_read[1]) >> 3) * 0.25
         except:
             self.logger.exception(
