@@ -1,0 +1,7 @@
+{
+  "nio/MAX6675": {
+    "Reference": "github.com/nio-blocks/max6675.git@v1.0.0",
+    "Language": "Python",
+    "Version": "1.0.0"
+  }
+}
