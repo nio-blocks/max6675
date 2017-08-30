@@ -1,7 +1,6 @@
 from threading import Lock
 from nio.block.base import Block
-from nio.properties.int import IntProperty
-from nio.util.discovery import discoverable
+from nio.properties import IntProperty, VersionProperty
 
 
 try:
@@ -11,11 +10,11 @@ except:
     pass
 
 
-@discoverable
 class MAX6675(Block):
 
     bus = IntProperty(default=0, title="Bus")
     client = IntProperty(default=0, title="Client")
+    version = VersionProperty('0.0.1')
 
     def __init__(self):
         super().__init__()

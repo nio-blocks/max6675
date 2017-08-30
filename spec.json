@@ -1,10 +1,31 @@
 {
   "nio/MAX6675": {
     "version": "0.0.1",
-    "description": "",
-    "inputs": {},
-    "outputs": {},
-    "properties": {},
+    "description": "Read temperature from a MAX6675 thermocouple over SPI.",
+    "properties": {
+      "bus": {
+        "title": "Bus",
+        "type": "IntType",
+        "description": "SPI bus number (generally 0 or 1).",
+        "default": 0
+      },
+      "client": {
+        "title": "Client",
+        "type": "IntType",
+        "description": "SPI client number.",
+        "default": 0
+      }
+    },
+    "inputs": {
+      "default": {
+        "description": "Any list of signals."
+      }
+    },
+    "outputs": {
+      "default": {
+        "description": "The attribute `temperature` (in degrees celsius) is appended onto the input signal."
+      }
+    },
     "commands": {}
   }
 }

@@ -1,20 +1,21 @@
 import sys
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
+
 from nio.block.terminals import DEFAULT_TERMINAL
 from nio.testing.block_test_case import NIOBlockTestCase
 from nio.signal.base import Signal
 
-
 # Mock spidev so tests run even when it's not installed
 spidev = MagicMock()
-sys.modules["spidev"] = spidev
-from ..max6675_block import MAX6675
 
 
 class TestMAX6675(NIOBlockTestCase):
 
     def setUp(self):
         super().setUp()
+        sys.modules["spidev"] = spidev
+        from ..max6675_block import MAX6675
+        global MAX6675
         spidev.reset_mock()
 
     def test_spi_connection(self):

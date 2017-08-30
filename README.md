@@ -1,32 +1,33 @@
 MAX6675
 =======
-
 Read temperature from a MAX6675 thermocouple over SPI.
 
 Properties
---------------
+----------
+- **bus**: SPI bus number (generally 0 or 1).
+- **client**: SPI client number.
 
--   **bus**: SPI bus number (generally 0 or 1)
--   **client**: SPI client number
+Inputs
+------
+- **default**: Any list of signals.
 
-Dependencies
-------------
-spidev
+Outputs
+-------
+- **default**: The attribute `temperature` (in degrees celsius) is appended onto the input signal.
 
 Commands
 --------
 None
 
-Input
--------
-Any Signal
+Dependencies
+------------
+spidev
 
-Output
-------
-The attribute `temperature` (in degrees celsius) is appended onto the input signal.
-
+Output Example
+--------------
 ```
 {
   "temperature": 23.0
 }
 ```
+
