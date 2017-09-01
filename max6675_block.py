@@ -14,7 +14,7 @@ class MAX6675(Block):
 
     bus = IntProperty(default=0, title="Bus")
     client = IntProperty(default=0, title="Client")
-    version = VersionProperty('0.0.1')
+    version = VersionProperty("1.0.0")
 
     def __init__(self):
         super().__init__()
