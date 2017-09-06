@@ -2,6 +2,9 @@
   "nio/MAX6675": {
     "version": "1.0.0",
     "description": "Read temperature from a MAX6675 thermocouple over SPI.",
+    "categories": [
+      "Hardware"
+    ],
     "properties": {
       "bus": {
         "title": "Bus",
