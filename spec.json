@@ -1,7 +1,7 @@
 {
   "nio/MAX6675": {
     "version": "1.0.0",
-    "description": "Read temperature from a MAX6675 thermocouple over SPI.",
+    "description": "Read temperature from a MAX6675 thermocouple over Serial Peripheral Interface (SPI).",
     "categories": [
       "Hardware"
     ],
@@ -26,7 +26,7 @@
     },
     "outputs": {
       "default": {
-        "description": "The attribute `temperature` (in degrees celsius) is appended onto the input signal."
+        "description": "The attribute `temperature` (in degrees Celsius) is appended onto the input signal."
       }
     },
     "commands": {}
